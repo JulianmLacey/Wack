@@ -24,8 +24,8 @@ const signUpEventHandler = async (event) => {
 
 		if (response.ok) {
 			// If successful, redirect the browser to the profile page
-			document.location.replace("/login");
 			console.log(response);
+			alert('Signup Successful')
 		} else {
 			alert(response.statusText);
 		}

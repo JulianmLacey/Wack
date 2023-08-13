@@ -1,17 +1,8 @@
-const router = require('express').Router();
-const { Project, User } = require('../../models');
+const router = require('express').Router()
+
+router.get('/create', async (req, res) => {
+    res.render('projectcreate');
+})
 
 
-//post projects
-
-router.get('/projects', async (req, res) => {
-    try {
-        const projects = await Project.findAll({
-            where: { userId: req.session.userId },
-        });
-        res.render('projects', { projects });
-    } catch (error) {
-        console.log(error);
-        res.status(500).send('Error fetching projects');
-    }
-});
+module.exports = router;

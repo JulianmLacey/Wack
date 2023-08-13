@@ -6,10 +6,10 @@ router.get("/", async (req, res) => {
     const loggedIn = req.session.log_in
     if (loggedIn) {
         res.render("home")
-    }else {
+    } else {
         res.render("verify");
     }
-   
+
 });
 
 router.get("/login", async (req, res) => {

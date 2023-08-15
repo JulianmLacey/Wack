@@ -1,4 +1,3 @@
-const { findByPk } = require('../models/USER');
 
 const router = require('express').Router();
 // const { Project, User } = require('../models');

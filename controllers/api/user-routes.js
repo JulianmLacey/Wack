@@ -15,8 +15,6 @@ router.get('/', async (req, res) => {
 });
 
 //Sign Up
-
-
 //POST SIGNUP - add user
 
 router.post('/', async (req, res) => {

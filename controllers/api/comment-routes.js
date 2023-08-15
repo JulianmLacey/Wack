@@ -41,24 +41,25 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.put('/:id', async (req, res) => {
-    // update a comment by its `id` value
-    try {
-        const comment = await Comment.update(req.body, { where: { id: req.params.id } })
-        res.status(200).json(comment);
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
+//Use if add ability to update or delete a comment
+// router.put('/:id', async (req, res) => {
+//     // update a comment by its `id` value
+//     try {
+//         const comment = await Comment.update(req.body, { where: { id: req.params.id } })
+//         res.status(200).json(comment);
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
 
-router.delete('/:id', async (req, res) => {
-    // delete a comment by its `id` value
-    try {
-        const comment = await Comment.destroy({ where: { id: req.params.id } })
-        res.status(200).json(comment);
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
+// router.delete('/:id', async (req, res) => {
+//     // delete a comment by its `id` value
+//     try {
+//         const comment = await Comment.destroy({ where: { id: req.params.id } })
+//         res.status(200).json(comment);
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
 
 module.exports = router;

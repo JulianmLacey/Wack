@@ -5,6 +5,7 @@ const commentBtn = document.getElementById("comment-btn");
 const commentContent = document.getElementById("content");
 const taskName = document.getElementById("task-name");
 const taskDescription = document.getElementById("task-description");
+const completeBtns = document.querySelectorAll(".complete-task-btns");
 
 
 const projectId = parseInt(document.location.pathname.split('/')[2]);
@@ -62,4 +63,24 @@ commentForm.addEventListener('submit', async function (e) {
 
         console.log(json)
     }
+})
+
+completeBtns.forEach(button => {
+    button.addEventListener('click', async function (e) {
+        e.preventDefault()
+        const taskId = button.getAttribute('data-task-id')
+        console.log(taskId);
+        const response = await fetch(`/api/tasks/${taskId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        if (response.ok) {
+            window.location.reload()
+        } else {
+            const json = await response.json()
+            console.log(json)
+        }
+    })
 })

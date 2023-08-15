@@ -61,7 +61,7 @@ router.post('/', async (req, res) => {
 
 //DELETE TASK
 router.delete('/:id', async (req, res) => {
-    // delete a comment by its `id` value
+    // delete a task by its `id` value
     try {
         const task = await Task.destroy({ where: { id: req.params.id } })
         res.status(200).json(task);

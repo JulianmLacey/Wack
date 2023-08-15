@@ -11,6 +11,7 @@
 <div class="all-projects">
     {{#each projects}}
     <a href="/home/{{id}}" style="text-decoration: none" >
+    {{!-- data-anijs rules have if and do parameters. In this instance if mouseover(hover) then to the bounceIn animation --}}
         <div class="projects-container" data-anijs="if: mouseover, do: bounceIn animated">
                 <h3>{{name}}</h3>
                 <p>{{missions_statement}}</p>
@@ -23,5 +24,6 @@
 <h1>Signup or Log in</h1>
 {{/if}}
 <script src="/js/logout.js"></script>
+{{!-- cdn link to the anijs animation library --}}
 <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script>
 

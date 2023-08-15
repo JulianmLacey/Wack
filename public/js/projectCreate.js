@@ -20,8 +20,8 @@ projectForm.addEventListener('submit', async function (e) {
 
     if (response.ok) {
         Swal.fire({
-            title: 'Sweet!',
-            text: 'Modal with a custom image.',
+            title: 'Success!',
+            text: 'You created a new project!',
             imageUrl: 'https://unsplash.it/400/200',
             imageWidth: 400,
             imageHeight: 200,

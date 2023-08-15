@@ -33,13 +33,13 @@
     </div>
 </div>
 <div class="container">
-    <h3>Comments</h3>
+    <h3 class="d-flex justify-content-center mb-4">Comments</h3>
     {{#each project.comments}}
     <div class="row">
-        <div class="col-sm">
+        <div class="col-sm m-3">
             <h5>{{this.user.name}}</h5>
         </div>
-        <div class="col-sm">
+        <div class="col-sm m-3">
             <p>{{this.content}}</p>
         </div>
     </div>
@@ -47,8 +47,10 @@
     {{#if loggedIn}}
     <div class="d-flex justify-content-center">
     <form id="comment-form">
-        <textarea id="content" placeholder="Add Comment" class="form-control w-50"></textarea>
-        <button id="comment-btn" >Add Comment</button>
+        <textarea id="content" placeholder="Add Comment" class="form-control w-500 h-100"></textarea>
+        <div class="d-flex justify-content-center">
+        <button id="comment-btn" class="btn btn-primary mt-2" >Add Comment</button>
+        </div>
     </div>
     </form>
     {{else}}

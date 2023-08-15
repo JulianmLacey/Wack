@@ -1,6 +1,6 @@
-const User = require("./USER");
+const User = require("./User");
 const Task = require("./Task");
-const Comment = require("./comment");
+const Comment = require("./Comment");
 const Project = require("./Project");
 
 User.hasOne(Project, {
